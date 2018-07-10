@@ -1,0 +1,35 @@
+@import '~normalize.css/normalize.css'; // path for StackBlitz or gives errors
+@import "~@angular/material/prebuilt-themes/pink-bluegrey.css";
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500");
+@import './_typography.scss'; // path for StackBlitz or gives errors
+@import './_mixins.scss';
+
+// Fonts will be sized based on: global rem-> module rem (optional)-> elements em (typography.scss)
+// @see https://css-tricks.com/rem-global-em-local/
+html {
+    box-sizing: border-box;
+    font-size: 12px;
+    @include bp-max-width-mobile() {
+        font-size: 8px; // component font sizes will be larger em's in this app
+    }
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    background-color: $color-background-body;
+    color: $color-ghostwhite;
+}
+
+// normalize does not configure box-sizing
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: $font-family-main;
+    font-size: 1.6em;
+}

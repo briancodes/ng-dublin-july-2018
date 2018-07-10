@@ -1,0 +1,25 @@
+{
+    "typescript.tsdk": "node_modules\\typescript\\lib",
+    "files.exclude": {
+        "node_modules/": true,
+        ".vscode/": false,
+        // Project Files
+        "tsconfig.json": true,
+        "tslint.json": true,
+        "tslint-base.json": true,
+        ".angular-cli.json": true,
+        "protractor.conf.js": true,
+        "package.json": false,
+        "package-lock.json": true,
+        "karma.conf.js": true,
+        ".editorconfig": false,
+        "e2e": true,
+        // src folder config files
+        "src/tsconfig.app.json": true,
+        "src/tsconfig.spec.json": true,
+        "src/typings.d.ts": true,
+        "src/test.ts": true,
+        "src/favicon.ico": true,
+        "src/karma.conf.js": true
+    }
+  }

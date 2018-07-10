@@ -1,0 +1,55 @@
+// StackBlitz issue with relative imports of scss
+@import '../../../../../styles/_variables.scss';
+
+.demo-controls {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    z-index: 1;
+    background-color: $color-dark-green-gray;
+    padding: 10px;
+    font-size: 1.5em;
+    border-bottom: 1px solid $color-light-pink-alpha; //pink with alpha
+    color: $color-light-gray;
+    transition: transform .1s;
+    &.hide-controls {
+        transition: transform .1s;
+        transform: translateY(-100%);
+    }
+}
+
+.demo-controls {
+    mat-select {
+        width: 10em;
+        border: 1px solid $color-pink;
+        margin-right: 10px;
+        .mat-select-value {
+            color: $color-light-gray;
+            padding-left: 10px;
+        }
+    }
+    .mat-checkbox-checked.mat-accent .mat-checkbox-background {
+        background-color: $color-light-gray;
+    }
+
+    .number-input {
+        width: 4em;
+        height: 1.2em;
+        border-radius: 4px;
+        background-color: $color-light-gray;
+    }
+
+    .run-checkbox {
+        display: block;
+    }
+}
+
+.throttle-panel .mat-select-content {
+    background: $color-dark-green-gray;
+    .mat-option {
+        height: 2em;
+    }
+    .mat-option-text {
+        color: $color-light-gray;
+    }
+}

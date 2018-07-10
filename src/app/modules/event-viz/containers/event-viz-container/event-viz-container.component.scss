@@ -1,0 +1,17 @@
+// Relative to ICB (unless ancestor has transform, perspective or filter set)
+.fixed-container {
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    overflow: hidden;
+    pointer-events: none; // override in children
+    .placeholder {
+        margin: 10px 0;
+    }
+}

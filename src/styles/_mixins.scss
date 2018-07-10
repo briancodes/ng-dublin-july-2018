@@ -1,0 +1,35 @@
+@import 'variables';
+
+/** http://zerosixthree.se/detecting-media-queries-with-javascript/ **/
+
+/** IMPORTANT: these breakpoint names are also used in the JS - Don't change
+    names without doing full text search */
+@mixin bp-max-width-tablet {
+    @media only screen and (max-width: ($max-section-width + 160)) {
+        // Whatever is in the @include curly braces replaces this @content
+        @content;
+    }
+}
+
+@mixin bp-max-width-mobile {
+    @media only screen and (max-width: $mobile-width) {
+        @content;
+    }
+}
+
+@mixin bp-max-width-section ($additional-px: 0px) {
+    @media only screen and (max-width: ($max-section-width + $additional-px)) {
+        @content;
+    }
+}
+
+/** Other Mixins **/
+@mixin no-select {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    user-select: none;
+}
+
+@mixin circleShadow($vertical) {
+	box-shadow:0 0 $vertical rgba(0,0,0,.14),0 $vertical $vertical*2 rgba(0,0,0,.28)
+}
+
