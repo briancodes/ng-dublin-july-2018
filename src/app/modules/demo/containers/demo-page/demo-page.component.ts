@@ -17,7 +17,7 @@ export class DemoPageComponent implements OnInit, AfterViewInit, DoCheck, OnDest
 
     // Defaults to the Component instance, we want the ElementRef.nativeElement.firstElementChild
     @ViewChild('bcDemoControls', { read: ElementRef }) bcDemoControls: ElementRef<HTMLElement>;
-    @ViewChild('topPage', { read: ElementRef }) topPage: ElementRef<HTMLElement>;
+    @ViewChild('topSection', { read: ElementRef }) topSection: ElementRef<HTMLElement>;
 
     private resizeSub: SubscriptionLike;
     private scrollTargetModel: ScrollTargetModel;
@@ -60,7 +60,7 @@ export class DemoPageComponent implements OnInit, AfterViewInit, DoCheck, OnDest
         this.scrollTargetModel = new ScrollTargetModel(window, document);
         // offsetHeight inlcudes content+padding+border+scrollbars (clientHeight no border+scrollbars)
         let controlsHeight = (this.bcDemoControls.nativeElement.firstElementChild as HTMLElement).offsetHeight;
-        this.scrollTargetModel.initialize(this.topPage.nativeElement, `${controlsHeight}px`);
+        this.scrollTargetModel.initialize(this.topSection.nativeElement, `${controlsHeight}px`);
     }
 
     ngDoCheck() {

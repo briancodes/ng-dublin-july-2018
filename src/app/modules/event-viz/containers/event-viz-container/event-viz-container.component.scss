@@ -1,7 +1,7 @@
 // Relative to ICB (unless ancestor has transform, perspective or filter set)
 .fixed-container {
     position: fixed;
-    z-index: 3;
+    z-index: 2;
     top: 0;
     left: 0;
     width: 100%;
